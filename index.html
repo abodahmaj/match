@@ -1,1 +1,399 @@
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTWMaseJaNk3-X-6f7SZFL0KX33FiXXjEYx1TX9VQSX8A02ELnVQN44tsZK21zwJsomIWt2w9hC_mDH/pubhtml?gid=1488158037&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقرير التقويم المدرسي التفاعلي - مجمع الثقافة التعليمي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .progress-bar-container {
+            background-color: #e5e7eb;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            direction: ltr;
+        }
+        .progress-bar {
+            height: 100%;
+            border-radius: 0.5rem;
+            transition: width 1s ease-in-out;
+            text-align: right;
+            padding-right: 8px;
+            color: white;
+            font-weight: bold;
+            font-size: 0.75rem;
+        }
+        .accordion-header i {
+            transition: transform 0.3s ease-in-out;
+        }
+        .accordion-item.open .accordion-header i {
+            transform: rotate(180deg);
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 1.5rem;
+            align-self: start;
+        }
+        .nav-link {
+            transition: all 0.2s ease-in-out;
+            border-right: 3px solid transparent;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #2563eb;
+            background-color: #eff6ff;
+            border-right-color: #2563eb;
+            transform: translateX(-4px);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md p-4 text-center sticky top-0 z-50">
+        <h1 class="text-2xl md:text-3xl font-extrabold text-blue-800">تقرير التقويم المدرسي</h1>
+        <p class="text-md md:text-lg text-gray-600">مجمع الثقافة التعليمي - متوسط</p>
+    </header>
+
+    <div class="max-w-screen-xl mx-auto p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Sticky Navigation -->
+        <aside class="hidden lg:block lg:col-span-3">
+            <nav id="desktop-nav" class="sticky-nav card p-4 space-y-2">
+                <h3 class="font-bold text-lg mb-3">محتويات التقرير</h3>
+                <a href="#info" class="nav-link block p-2 rounded-md font-semibold text-gray-600">معلومات المدرسة</a>
+                <a href="#summary" class="nav-link block p-2 rounded-md font-semibold text-gray-600">بطاقة التقويم</a>
+                <a href="#highlights" class="nav-link block p-2 rounded-md font-semibold text-gray-600">ملخص النتائج</a>
+                <a href="#details" class="nav-link block p-2 rounded-md font-semibold text-gray-600">الأداء التفصيلي</a>
+                <a href="#stakeholders" class="nav-link block p-2 rounded-md font-semibold text-gray-600">آراء أصحاب المصلحة</a>
+                <a href="#nafes" class="nav-link block p-2 rounded-md font-semibold text-gray-600">نتائج اختبارات نافس</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="lg:col-span-9 space-y-12">
+            
+            <!-- School Info -->
+            <section id="info" class="card p-6">
+                <h2 class="text-2xl font-bold mb-4 border-b-2 border-blue-200 pb-2">معلومات المدرسة</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-gray-700">
+                    <div><strong class="block text-gray-900">اسم المدرسة:</strong> مجمع الثقافة التعليمي</div>
+                    <div><strong class="block text-gray-900">إدارة التعليم:</strong> محافظة رجال ألمع</div>
+                    <div><strong class="block text-gray-900">المرحلة:</strong> متوسط</div>
+                    <div><strong class="block text-gray-900">الجنس:</strong> بنين</div>
+                    <div><strong class="block text-gray-900">عدد الطلاب:</strong> 61</div>
+                    <div><strong class="block text-gray-900">عدد المعلمين:</strong> 20</div>
+                    <div><strong class="block text-gray-900">تاريخ التقويم:</strong> 2024/08/31</div>
+                    <div><strong class="block text-gray-900">الرقم الوزاري:</strong> S-67175</div>
+                </div>
+            </section>
+
+            <!-- Summary Card -->
+            <section id="summary" class="card p-6">
+                 <h2 class="text-2xl font-bold mb-4 text-center">بطاقة التقويم المدرسي</h2>
+                 <div class="text-center mb-6">
+                     <p class="text-4xl font-extrabold" id="overall-score-text">60%</p>
+                     <p class="font-semibold text-xl" id="overall-level-text">الانطلاق</p>
+                     <p class="text-gray-500">أداء مقبول يحتاج إلى تحسين في بعض المجالات</p>
+                 </div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="text-center p-3 bg-gray-50 rounded-lg">
+                        <p class="font-bold text-lg">الإدارة المدرسية</p>
+                        <p class="font-bold text-2xl text-blue-600">68.25%</p>
+                    </div>
+                     <div class="text-center p-3 bg-gray-50 rounded-lg">
+                        <p class="font-bold text-lg">التعليم والتعلم</p>
+                        <p class="font-bold text-2xl text-orange-600">52.25%</p>
+                    </div>
+                     <div class="text-center p-3 bg-gray-50 rounded-lg">
+                        <p class="font-bold text-lg">نواتج التعلم</p>
+                        <p class="font-bold text-2xl text-green-600">67.00%</p>
+                    </div>
+                     <div class="text-center p-3 bg-gray-50 rounded-lg">
+                        <p class="font-bold text-lg">البيئة المدرسية</p>
+                        <p class="font-bold text-2xl text-red-600">47.25%</p>
+                    </div>
+                 </div>
+            </section>
+            
+            <!-- Highlights -->
+            <section id="highlights" class="card p-6">
+                 <h2 class="text-2xl font-bold mb-6 text-center">ملخص نتائج المدرسة</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                     <!-- Strengths -->
+                     <div>
+                        <h3 class="text-xl font-bold text-green-600 mb-4 flex items-center"><i class="fas fa-thumbs-up mr-2"></i> أبرز نقاط القوة</h3>
+                         <ul class="space-y-3">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>يظهر المتعلمون التزاماً بالممارسات الصحية السليمة.</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>تنشر المدرسة قواعد السلوك والمواظبة، وتتابع تطبيقها.</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>يظهر المتعلمون الاعتزاز بالقيم والهوية الوطنية.</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>يلتزم المتعلمون بقواعد السلوك والانضباط المدرسي.</span></li>
+                         </ul>
+                     </div>
+                     <!-- Improvements -->
+                     <div>
+                        <h3 class="text-xl font-bold text-red-600 mb-4 flex items-center"><i class="fas fa-tools mr-2"></i> جوانب تحتاج إلى تحسين</h3>
+                         <ul class="space-y-3">
+                              <li class="flex items-start"><i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i><span>تعزيز الشراكة المجتمعية لدعم التعلم.</span></li>
+                              <li class="flex items-start"><i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i><span>توفير متطلبات الأمن والسلامة في الفصول والمرافق.</span></li>
+                              <li class="flex items-start"><i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i><span>متابعة تنفيذ الخطة وتطويرها لتحقيق أهدافها.</span></li>
+                              <li class="flex items-start"><i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i><span>تنمية مهارات التفكير العليا لدى المتعلمين.</span></li>
+                              <li class="flex items-start"><i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i><span>تنويع استراتيجيات التدريس لتلبية احتياجات المتعلمين.</span></li>
+                         </ul>
+                     </div>
+                 </div>
+            </section>
+            
+            <!-- Detailed Performance -->
+            <section id="details" class="card p-6">
+                <h2 class="text-2xl font-bold mb-4 text-center">الأداء التفصيلي لنتائج المدرسة</h2>
+                <p class="text-center text-gray-500 mb-6">انقر على كل مجال لعرض المؤشرات التفصيلية ومقترحات التحسين.</p>
+                <div id="accordion-container" class="space-y-4">
+                    <!-- Accordion items will be injected here by JS -->
+                </div>
+            </section>
+            
+            <!-- Stakeholders -->
+            <section id="stakeholders" class="card p-6">
+                <h2 class="text-2xl font-bold mb-6 text-center">آراء أصحاب المصلحة</h2>
+                <div class="space-y-8">
+                    <!-- Students -->
+                    <div>
+                         <h3 class="text-xl font-bold mb-3">استبانة المتعلم</h3>
+                         <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
+                            <div class="space-y-1"><p>الإدارة المدرسية</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-blue-500" style="width: 95%;"></div></div><p class="text-right font-semibold text-sm">95%</p></div>
+                            <div class="space-y-1"><p>التعليم والتعلم</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-blue-500" style="width: 94%;"></div></div><p class="text-right font-semibold text-sm">94%</p></div>
+                            <div class="space-y-1"><p>نواتج التعلم</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-blue-500" style="width: 97%;"></div></div><p class="text-right font-semibold text-sm">97%</p></div>
+                            <div class="space-y-1"><p>البيئة المدرسية</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-blue-500" style="width: 95%;"></div></div><p class="text-right font-semibold text-sm">95%</p></div>
+                         </div>
+                    </div>
+                    <!-- Parents -->
+                     <div>
+                         <h3 class="text-xl font-bold mb-3">استبانة ولي الأمر</h3>
+                         <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
+                            <div class="space-y-1"><p>الإدارة المدرسية</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-green-500" style="width: 96%;"></div></div><p class="text-right font-semibold text-sm">96%</p></div>
+                            <div class="space-y-1"><p>التعليم والتعلم</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-green-500" style="width: 93%;"></div></div><p class="text-right font-semibold text-sm">93%</p></div>
+                            <div class="space-y-1"><p>نواتج التعلم</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-green-500" style="width: 96%;"></div></div><p class="text-right font-semibold text-sm">96%</p></div>
+                            <div class="space-y-1"><p>البيئة المدرسية</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-green-500" style="width: 100%;"></div></div><p class="text-right font-semibold text-sm">100%</p></div>
+                         </div>
+                    </div>
+                    <!-- Teachers -->
+                     <div>
+                         <h3 class="text-xl font-bold mb-3">استبانة المعلم</h3>
+                         <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
+                            <div class="space-y-1"><p>الإدارة المدرسية</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-purple-500" style="width: 90%;"></div></div><p class="text-right font-semibold text-sm">90%</p></div>
+                            <div class="space-y-1"><p>التعليم والتعلم</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-purple-500" style="width: 89%;"></div></div><p class="text-right font-semibold text-sm">89%</p></div>
+                            <div class="space-y-1"><p>نواتج التعلم</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-purple-500" style="width: 90%;"></div></div><p class="text-right font-semibold text-sm">90%</p></div>
+                            <div class="space-y-1"><p>البيئة المدرسية</p><div class="progress-bar-container h-3"><div class="progress-bar-animated bg-purple-500" style="width: 83%;"></div></div><p class="text-right font-semibold text-sm">83%</p></div>
+                         </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- NAFES -->
+            <section id="nafes" class="card p-6 text-center">
+                <h2 class="text-2xl font-bold mb-4">أداء المدرسة وفقاً لنتائج اختبارات نافس</h2>
+                <p class="text-gray-600 mb-6">يوضح الشكل أدناه بطاقة المدرسة في الاختبارات الوطنية "نافس" في مجالات القراءة، الرياضيات، والعلوم الطبيعية.</p>
+                <a href="#" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+                    اضغط هنا لمشاهدة البطاقة على المنصة
+                </a>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center p-6 mt-12 bg-gray-800 text-white">
+        <p>هيئة تقويم التعليم والتدريب - Education & Training Evaluation Commission</p>
+        <p class="text-sm text-gray-400">&copy; 2025</p>
+    </footer>
+
+<script>
+// Data for the detailed performance accordion
+const accordionData = [
+    { 
+        title: "الإدارة المدرسية", 
+        score: 68.25, 
+        indicators: [
+            { text: "تضع المدرسة خطة تشغيلية مكتملة العناصر وفق أهداف تطويرية محددة.", score: 58.75, suggestion: "يتوقع من المدرسة تطوير خطة تشغيلية مرنة تتضمن أهداف تطويرية طموحة وبرامج وأنشطة متنوعة ومبادرات نوعية." },
+            { text: "تتابع المدرسة تنفيذ خطتها وتطورها بما يضمن تحقيق أهدافها.", score: 37.00, suggestion: "يتوقع من المدرسة متابعة تنفيذ خطتها، وتقويمها بانتظام وبأساليب متنوعة وفق مؤشرات أداء محددة وواضحة." },
+            { text: "تعزز المدرسة القيم الإسلامية والهوية الوطنية.", score: 87.75, suggestion: "يتوقع من المدرسة غرس القيم الإسلامية والهوية الوطنية، وتعزيز الانتماء للوطن والولاء للقيادة الرشيدة لدى المتعلمين." },
+            { text: "تلتزم المدرسة بقيم مهنة التعليم وأخلاقياتها.", score: 73.50, suggestion: "يتوقع من المدرسة تعزيز الالتزام بقواعد السلوك الوظيفي وأخلاقيات مهنة التعليم والتوعية بها بأساليب متنوعة." },
+            { text: "توفر المدرسة مناخاً آمناً للتعلم والنمو نفسياً واجتماعياً.", score: 86.50, suggestion: "يتوقع من المدرسة توفير مناخ آمن يدعم التعلم ويشجع المتعلمين على المناقشة والحوار، وتقبل الرأي الآخر." },
+            { text: "تنشر المدرسة قواعد السلوك والمواظبة، وتتابع تطبيقها.", score: 91.50, suggestion: "يتوقع من المدرسة الاستمرار في نشر قواعد السلوك والمواظبة، والتوعية بها وتحديد توقعات سلوك المتعلمين." },
+            { text: "توفر المدرسة برامج وأنشطة تربوية داعمة للسلوك الإيجابي.", score: 73.00, suggestion: "يتوقع من المدرسة توفير أنشطة وبرامج علاجية ووقائية متنوعة تضمن مشاركة جميع المتعلمين فيها لتعزيز السلوك الإيجابي." },
+            { text: "تعزز المدرسة الشراكة المجتمعية لدعم التعلم والتأثير الإيجابي في المجتمع المحلي.", score: 30.25, suggestion: "يتوقع من المدرسة توفير فرص للتواصل مع المجتمع المحلي بطرق متنوعة، واستثمار إمكانات المؤسسات الوطنية." },
+            { text: "تنفذ المدرسة خطة للتحسين بناء على نتائج التقويم المدرسي، وتتابعها.", score: 50.25, suggestion: "يتوقع من المدرسة تطوير خطة للتحسين في ضوء نتائج التقويم المدرسي وتحديد الأولويات لمعالجة جوانب التحسين." }
+        ]
+    },
+    { 
+        title: "التعليم والتعلم", 
+        score: 52.25,
+        indicators: [
+            { text: "توفر المدرسة فرصاً متكافئة للتعلم تلبي احتياجات المتعلمين.", score: 41.50, suggestion: "يتوقع من المدرسة توفير فرص تعلم متكافئة تقدم لجميع المتعلمين، وتستجيب لاحتياجاتهم المختلفة ومنهم ذوو الإعاقة والموهوبون." },
+            { text: "تنوع المدرسة في إستراتيجيات التدريس لتلبية احتياجات المتعلمين.", score: 40.00, suggestion: "يتوقع من المدرسة العمل على بناء خبرات تعلم ثرية للمتعلمين تشجع البحث والتجريب وتطبق إستراتيجيات تدريس متنوعة." },
+            { text: "تنمي المدرسة مهارات التفكير العليا لدى المتعلمين.", score: 38.50, suggestion: "يتوقع من المدرسة توفير أساليب وأنشطة تعلم متنوعة تستهدف تنمية مهارات التفكير العليا لدى جميع المتعلمين." },
+            { text: "تقوم المدرسة أداء المتعلمين باستخدام أساليب وأدوات تقويم متنوعة وفاعلة.", score: 39.25, suggestion: "يتوقع من المدرسة تطبيق أساليب وأدوات تقويم فاعلة ومتنوعة (تشخيصية، تكوينية، ختامية) لدعم التعلم." },
+            { text: "تحلل المدرسة نتائج التقويم، وتوظفها في تحسين نواتج التعلم بانتظام.", score: 51.75, suggestion: "يتوقع من المدرسة تحليل نتائج التقويم وتفسيرها، واتخاذ القرارات المناسبة في تحسين نواتج التعلم وتحديد الفجوة في الأداء." }
+        ]
+    },
+    { 
+        title: "نواتج التعلم", 
+        score: 67.00,
+        indicators: [
+            { text: "يحقق المتعلمون نتائج متقدمة في مجال القراءة وفقاً للاختبارات الوطنية.", score: 77.76, suggestion: "يتوقع من المدرسة العمل على رفع نسبة المتعلمين الذين يحققون مستويات متقدمة في نواتج التعلم لمجال القراءة." },
+            { text: "يحقق المتعلمون نتائج متقدمة في مجال الرياضيات وفقاً للاختبارات الوطنية.", score: 52.82, suggestion: "يتوقع من المدرسة العمل على رفع نسبة المتعلمين الذين يحققون مستويات متقدمة في نواتج التعلم لمجال الرياضيات." },
+            { text: "يحقق المتعلمون نتائج متقدمة في مجال العلوم وفقاً للاختبارات الوطنية.", score: 60.56, suggestion: "يتوقع من المدرسة العمل على رفع نسبة المتعلمين الذين يحققون مستويات متقدمة في نواتج التعلم لمجال العلوم." },
+            { text: "يظهر المتعلمون الاعتزاز بالقيم والهوية الوطنية.", score: 91.25, suggestion: "يتوقع من المدرسة الاستمرار في تعزيز القيم الإسلامية والهوية الوطنية واللغة العربية والاعتزاز بمنجزات الوطن." },
+            { text: "يلتزم المتعلمون بقواعد السلوك والانضباط المدرسي.", score: 91.00, suggestion: "يتوقع من المدرسة الاستمرار فى تعزيز التزام المتعلمين بقواعد السلوك والانضباط المدرسي." }
+        ]
+    },
+    { 
+        title: "البيئة المدرسية", 
+        score: 47.25,
+        indicators: [
+            { text: "تنظيم مبنى المدرسة ملائم لعدد المتعلمين والمرحلة العمرية.", score: 63.75, suggestion: "يتوقع من المدرسة العمل مع الجهات ذات العلاقة لتطوير المبنى المدرسي، وتنظيم الأثاث بما يساعد في تحقيق بيئة مدرسية تحقق الرفاه." },
+            { text: "تتوافر في فصول المدرسة ومعاملها وجميع مرافقها متطلبات الأمن والسلامة.", score: 32.50, suggestion: "يتوقع من المدرسة متابعة متطلبات وتجهيزات الأمن والسلامة في الفصول وجميع المرافق بانتظام، وتعزيز ثقافة الأمن والسلامة." },
+            { text: "تعمل المدرسة على صيانة جميع مرافق المبنى وتجهيزاته بانتظام.", score: 51.25, suggestion: "يتوقع من المدرسة العمل على متابعة الصيانة لجميع المرافق والتجهيزات بانتظام، بما يضمن استدامة كفاءة المبنى المدرسي." },
+            { text: "تعمل المدرسة على نظافة المبنى المدرسي وجميع مرافقه بانتظام.", score: 79.25, suggestion: "يتوقع من المدرسة العمل على نظافة المبنى ومرافقه و متابعتها بانتظام، وتوفير جميع أدوات النظافة اللازمة." }
+        ]
+    }
+];
+
+document.addEventListener('DOMContentLoaded', function () {
+    // --- Helper function to get color based on score ---
+    const getScoreColorAndLevel = (score) => {
+        if (score >= 90) return { color: '#22c55e', level: 'التميز', bg: 'bg-green-500' }; // green
+        if (score >= 75) return { color: '#3b82f6', level: 'التقدم', bg: 'bg-blue-500' };   // blue
+        if (score >= 50) return { color: '#f97316', level: 'الانطلاق', bg: 'bg-orange-500' };// orange
+        return { color: '#ef4444', level: 'التهيئة', bg: 'bg-red-500' };      // red
+    };
+
+    // --- Update main score card ---
+    const overallScore = 60;
+    const { color: overallColor, level: overallLevel } = getScoreColorAndLevel(overallScore);
+    document.getElementById('overall-score-text').style.color = overallColor;
+    document.getElementById('overall-level-text').style.color = overallColor;
+    document.getElementById('overall-level-text').textContent = overallLevel;
+
+    // --- Build Accordion ---
+    const accordionContainer = document.getElementById('accordion-container');
+    accordionData.forEach((item, index) => {
+        const { color: scoreColor, bg: scoreBg } = getScoreColorAndLevel(item.score);
+        
+        const indicatorsHtml = item.indicators.map(indicator => {
+            const { color: indColor, level: indLevel, bg: indBg } = getScoreColorAndLevel(indicator.score);
+            return `
+                <div class="py-3 border-b border-gray-200 last:border-b-0">
+                    <p class="font-semibold text-gray-700">${indicator.text}</p>
+                    <div class="flex items-center justify-between mt-2 mb-1">
+                        <span class="font-bold text-sm px-2 py-1 rounded-md text-white ${indBg}">${indLevel}</span>
+                        <span class="font-bold" style="color:${indColor}">${indicator.score}%</span>
+                    </div>
+                    <div class="progress-bar-container w-full h-3">
+                        <div class="progress-bar-animated ${indBg}" style="width: ${indicator.score}%;"></div>
+                    </div>
+                    <div class="mt-3 p-3 bg-blue-50 border-r-4 border-blue-400 rounded-md">
+                        <p class="text-sm text-blue-800"><strong class="font-bold">مقترح التحسين:</strong> ${indicator.suggestion}</p>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        const accordionItem = document.createElement('div');
+        accordionItem.className = 'accordion-item border border-gray-200 rounded-lg overflow-hidden';
+        accordionItem.innerHTML = `
+            <div class="accordion-header bg-gray-50 p-4 cursor-pointer flex justify-between items-center">
+                <div class="flex items-center">
+                    <span class="font-bold text-lg">${item.title}</span>
+                    <span class="font-extrabold text-xl mr-4" style="color:${scoreColor};">${item.score}%</span>
+                </div>
+                <i class="fas fa-chevron-down text-gray-500"></i>
+            </div>
+            <div class="accordion-content hidden p-4 bg-white">
+                ${indicatorsHtml}
+            </div>
+        `;
+        accordionContainer.appendChild(accordionItem);
+    });
+
+    // --- Accordion functionality ---
+    accordionContainer.addEventListener('click', (e) => {
+        const header = e.target.closest('.accordion-header');
+        if (header) {
+            const item = header.parentElement;
+            const content = header.nextElementSibling;
+            
+            item.classList.toggle('open');
+            content.classList.toggle('hidden');
+        }
+    });
+
+    // --- Animate progress bars on scroll ---
+    const animateOnScroll = () => {
+        const progressBars = document.querySelectorAll('.progress-bar-animated');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bar = entry.target;
+                    const width = bar.style.width; // This is already set e.g., "95%"
+                    bar.style.width = width; 
+                    observer.unobserve(bar); 
+                }
+            });
+        }, { threshold: 0.5 });
+
+        progressBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0%'; // Reset for animation
+            setTimeout(() => { bar.style.width = width; }, 100); // Re-apply after a tick
+            observer.observe(bar);
+        });
+    };
+    animateOnScroll();
+    
+    // --- Navigation active state on scroll ---
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#desktop-nav a');
+
+    const observerOptions = {
+        rootMargin: "-50% 0px -50% 0px", // a horizontal line in the middle of the screen
+        threshold: 0
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+});
+</script>
+
+</body>
+</html>
+
+
